@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-40 relative border-t border-neutral-900/50">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+      <div className="max-w-4xl mx-auto px-8 md:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

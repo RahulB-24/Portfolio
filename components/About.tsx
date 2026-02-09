@@ -5,10 +5,10 @@ import { GraduationCap } from 'lucide-react';
 const About: React.FC = () => {
   return (
     <section id="about" className="py-32 relative">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-8 md:px-6">
         <div className="grid md:grid-cols-12 gap-16 items-start">
-          
-          <motion.div 
+
+          <motion.div
             className="md:col-span-7 space-y-10"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -18,7 +18,7 @@ const About: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white flex items-center gap-4 font-display">
               <span className="text-violet-400">01.</span> About Me
             </h2>
-            
+
             <div className="space-y-6 text-neutral-300 text-xl leading-relaxed font-medium">
               <p>
                 I am a B.Tech Computer Science and Engineering student specializing in AI and Machine Learning at <strong className="text-violet-400 font-bold">VIT Chennai</strong>, with a strong focus on software engineering and backend systems. I enjoy building reliable, production-grade applications using technologies like <strong className="text-violet-400 font-bold">Java, Spring Boot, Node.js, React, and PostgreSQL</strong>. My interests lie in designing clean APIs, scalable system architectures, and full-stack products that solve real problems rather than just building demos.
@@ -32,7 +32,7 @@ const About: React.FC = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="md:col-span-5"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

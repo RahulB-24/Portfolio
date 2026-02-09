@@ -5,7 +5,7 @@ import { SKILL_CATEGORIES } from '../constants';
 const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-32">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-8 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ const Skills: React.FC = () => {
 
         <div className="space-y-16">
           {SKILL_CATEGORIES.map((category, idx) => (
-            <motion.div 
+            <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -41,8 +41,8 @@ const Skills: React.FC = () => {
               {/* Skills Grid */}
               <div className="md:col-span-9 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                 {category.skills.map((skill) => (
-                  <motion.div 
-                    key={skill.name} 
+                  <motion.div
+                    key={skill.name}
                     className="group flex flex-col items-center justify-center gap-4 p-6 bg-neutral-900/60 backdrop-blur-sm border border-neutral-800 rounded-2xl hover:border-neutral-500 transition-colors"
                     whileHover={{ scale: 1.02 }}
                   >

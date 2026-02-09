@@ -6,7 +6,7 @@ const About: React.FC = () => {
   return (
     <section id="about" className="py-32 relative overflow-x-hidden">
       <div className="max-w-6xl mx-auto px-8 md:px-6">
-        <div className="grid md:grid-cols-12 gap-16 items-start">
+        <div className="grid md:grid-cols-12 gap-16 items-start w-full">
 
           <motion.div
             className="md:col-span-7 space-y-10"
@@ -33,13 +33,13 @@ const About: React.FC = () => {
           </motion.div>
 
           <motion.div
-            className="md:col-span-5"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="md:col-span-5 w-full"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative bg-neutral-900/80 backdrop-blur-sm border border-neutral-800 p-10 rounded-2xl shadow-2xl hover:border-neutral-600 transition-colors">
+            <div className="relative bg-neutral-900/80 backdrop-blur-sm border border-neutral-800 p-6 md:p-10 rounded-2xl shadow-2xl hover:border-neutral-600 transition-colors">
               <h3 className="text-2xl font-bold text-white mb-8 font-display">Education</h3>
               <div className="flex items-start gap-5">
                 <div className="mt-1 p-3 bg-neutral-800 rounded-lg text-violet-400 border border-neutral-700">

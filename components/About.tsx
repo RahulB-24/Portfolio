@@ -4,7 +4,7 @@ import { GraduationCap } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-32 relative">
+    <section id="about" className="py-32 relative overflow-x-hidden">
       <div className="max-w-6xl mx-auto px-8 md:px-6">
         <div className="grid md:grid-cols-12 gap-16 items-start">
 
@@ -19,7 +19,7 @@ const About: React.FC = () => {
               <span className="text-violet-400">01.</span> About Me
             </h2>
 
-            <div className="space-y-6 text-neutral-300 text-xl leading-relaxed font-medium">
+            <div className="space-y-6 text-neutral-300 text-xl leading-relaxed font-medium break-words">
               <p>
                 I am a B.Tech Computer Science and Engineering student specializing in AI and Machine Learning at <strong className="text-violet-400 font-bold">VIT Chennai</strong>, with a strong focus on software engineering and backend systems. I enjoy building reliable, production-grade applications using technologies like <strong className="text-violet-400 font-bold">Java, Spring Boot, Node.js, React, and PostgreSQL</strong>. My interests lie in designing clean APIs, scalable system architectures, and full-stack products that solve real problems rather than just building demos.
               </p>

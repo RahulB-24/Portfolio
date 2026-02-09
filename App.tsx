@@ -13,13 +13,13 @@ import ScrollSpaceship from './components/ScrollSpaceship';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-neutral-950 min-h-screen text-neutral-300 selection:bg-violet-500/30 selection:text-violet-200 relative isolate">
+    <div className="bg-neutral-950 min-h-screen text-neutral-300 selection:bg-violet-500/30 selection:text-violet-200 relative isolate overflow-x-hidden">
       {/* Static ambient top-light for depth - Moved to z-[-1] to stay behind interactive elements */}
       <div className="fixed inset-0 z-[-1] pointer-events-none bg-[radial-gradient(circle_at_top_center,_var(--tw-gradient-stops))] from-neutral-900/40 via-neutral-950 to-neutral-950"></div>
 
       {/* Dynamic interactive cursor glow and code rain */}
       <InteractiveBackground />
-      
+
       {/* Scroll Progress Spaceship */}
       <ScrollSpaceship />
 

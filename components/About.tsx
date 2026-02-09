@@ -4,22 +4,22 @@ import { GraduationCap } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-32 relative overflow-x-hidden">
-      <div className="max-w-6xl mx-auto px-8 md:px-6">
-        <div className="grid md:grid-cols-12 gap-16 items-start w-full">
+    <section id="about" className="py-32 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 md:px-6">
+        <div className="flex flex-col md:grid md:grid-cols-12 gap-10 md:gap-16 items-start">
 
           <motion.div
-            className="md:col-span-7 space-y-10"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="md:col-span-7 space-y-10 w-full"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white flex items-center gap-4 font-display">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white flex items-center gap-3 md:gap-4 font-display">
               <span className="text-violet-400">01.</span> About Me
             </h2>
 
-            <div className="space-y-6 text-neutral-300 text-xl leading-relaxed font-medium break-words">
+            <div className="space-y-6 text-neutral-300 text-base sm:text-lg md:text-xl leading-relaxed font-medium">
               <p>
                 I am a B.Tech Computer Science and Engineering student specializing in AI and Machine Learning at <strong className="text-violet-400 font-bold">VIT Chennai</strong>, with a strong focus on software engineering and backend systems. I enjoy building reliable, production-grade applications using technologies like <strong className="text-violet-400 font-bold">Java, Spring Boot, Node.js, React, and PostgreSQL</strong>. My interests lie in designing clean APIs, scalable system architectures, and full-stack products that solve real problems rather than just building demos.
               </p>
@@ -39,19 +39,19 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="relative bg-neutral-900/80 backdrop-blur-sm border border-neutral-800 p-6 md:p-10 rounded-2xl shadow-2xl hover:border-neutral-600 transition-colors">
-              <h3 className="text-2xl font-bold text-white mb-8 font-display">Education</h3>
-              <div className="flex items-start gap-5">
-                <div className="mt-1 p-3 bg-neutral-800 rounded-lg text-violet-400 border border-neutral-700">
-                  <GraduationCap size={28} />
+            <div className="relative bg-neutral-900/80 backdrop-blur-sm border border-neutral-800 p-5 sm:p-6 md:p-10 rounded-2xl shadow-2xl hover:border-neutral-600 transition-colors">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 md:mb-8 font-display">Education</h3>
+              <div className="flex items-start gap-4 md:gap-5">
+                <div className="mt-1 p-2 sm:p-3 bg-neutral-800 rounded-lg text-violet-400 border border-neutral-700 flex-shrink-0">
+                  <GraduationCap size={24} className="sm:w-7 sm:h-7" />
                 </div>
-                <div>
-                  <h4 className="text-xl font-bold text-neutral-100">Vellore Institute of Technology</h4>
-                  <p className="text-lg text-neutral-400 font-medium leading-snug mb-2">B.Tech in Computer Science and Engineering (AIML Specialization)</p>
-                  <p className="text-base text-neutral-500 font-medium">
-                    Chennai, India • <span className="whitespace-nowrap">Aug 2023 – May 2027 (Expected)</span>
+                <div className="min-w-0">
+                  <h4 className="text-lg sm:text-xl font-bold text-neutral-100">Vellore Institute of Technology</h4>
+                  <p className="text-base sm:text-lg text-neutral-400 font-medium leading-snug mb-2">B.Tech in Computer Science and Engineering (AIML Specialization)</p>
+                  <p className="text-sm sm:text-base text-neutral-500 font-medium">
+                    Chennai, India • Aug 2023 – May 2027 (Expected)
                   </p>
-                  <p className="text-base text-neutral-400 mt-2 font-medium">CGPA: 8.65</p>
+                  <p className="text-sm sm:text-base text-neutral-400 mt-2 font-medium">CGPA: 8.65</p>
                 </div>
               </div>
             </div>

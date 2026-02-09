@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20 overflow-x-hidden">
       <div className="max-w-6xl mx-auto px-8 md:px-6 text-center">
 
         <motion.div
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
             <span>Hello World</span>
           </div>
 
-          <h1 className="text-7xl md:text-9xl font-bold tracking-tighter leading-none text-white mb-6 font-display">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold tracking-tighter leading-none text-white mb-6 font-display">
             Rahul <br className="md:hidden" /> Balachandar
           </h1>
 

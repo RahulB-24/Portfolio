@@ -18,9 +18,6 @@ const Projects: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white flex items-center gap-4 font-display">
             <span className="text-violet-400">04.</span> Projects
           </h2>
-          <p className="text-neutral-400 mt-6 max-w-2xl text-xl font-medium">
-            A showcase of my technical projects, ranging from full-stack web applications to deployed machine learning systems.
-          </p>
         </motion.div>
 
         {/* Featured Projects List with Alternating Layout */}

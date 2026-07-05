@@ -15,9 +15,6 @@ const Skills: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white flex items-center gap-4 mb-6 font-display">
             <span className="text-violet-400">02.</span> Technical Skills
           </h2>
-          <p className="text-neutral-400 text-xl font-medium max-w-2xl">
-            A comprehensive toolkit focused on building scalable, high-performance applications.
-          </p>
         </motion.div>
 
         <div className="space-y-16">

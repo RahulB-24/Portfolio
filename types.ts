@@ -39,3 +39,10 @@ export interface Publication {
   title: string;
   status: string;
 }
+
+export interface Achievement {
+  title: string;
+  source: string;
+  description?: string;
+  link?: string;
+}

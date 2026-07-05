@@ -98,7 +98,8 @@ const Navbar: React.FC = () => {
             </a>
             <a
               href={SOCIAL_LINKS.resume}
-              download
+              target="_blank"
+              rel="noreferrer"
               className="hidden lg:flex items-center gap-2 px-4 py-2 bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 hover:border-neutral-600 rounded-md text-xs font-semibold text-white transition-all ml-2"
             >
               <FileText size={14} />
@@ -133,7 +134,7 @@ const Navbar: React.FC = () => {
           <div className="flex gap-6 mt-4 pt-4 border-t border-neutral-800">
             <a href={SOCIAL_LINKS.github} className="text-neutral-400 hover:text-white"><Github size={24} /></a>
             <a href={SOCIAL_LINKS.linkedin} className="text-neutral-400 hover:text-white"><Linkedin size={24} /></a>
-            <a href={SOCIAL_LINKS.resume} download className="flex items-center gap-2 text-violet-400 font-medium"><FileText size={20} /> Resume</a>
+            <a href={SOCIAL_LINKS.resume} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-violet-400 font-medium"><FileText size={20} /> Resume</a>
           </div>
         </div>
       )}

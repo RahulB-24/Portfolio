@@ -1,9 +1,9 @@
-import { Project, Experience, Certification, SkillCategory, Publication } from './types';
+import { Project, Experience, Certification, SkillCategory, Publication, Achievement } from './types';
 import { Layout, Server, Database, Cloud, Code, Brain, Terminal } from 'lucide-react';
 
 export const SOCIAL_LINKS = {
   github: "https://github.com/RahulB-24",
-  linkedin: "https://www.linkedin.com/in/rahul-balachandar-a9436a293/",
+  linkedin: "https://www.linkedin.com/in/rahul-balachandar/",
   email: "mailto:rahulbalachandar024@gmail.com", 
   resume: "/Rahul Balachandar Resume.pdf" 
 };
@@ -24,12 +24,12 @@ export const SKILL_CATEGORIES: (SkillCategory & { icon: any })[] = [
     title: "Backend Engineering",
     skills: [
       { name: "Spring Boot", icon: "devicon-spring-original colored" },
-      { name: "Flask", icon: "devicon-flask-original" }, // Kept white for dark mode
+      { name: "Flask", icon: "devicon-flask-original" },
       { name: "Node.js", icon: "devicon-nodejs-plain colored" },
-      { name: "Express", icon: "devicon-express-original" }, // Often dark, remove colored to make white
+      { name: "Express", icon: "devicon-express-original" },
       { name: "FastAPI", icon: "devicon-fastapi-plain colored" },
-      { name: "REST APIs", icon: "devicon-azuresqldatabase-plain colored" }, 
-      { name: "Auth / RBAC", icon: "devicon-oauth-plain" } // Removed colored to make it visible (white)
+      { name: "REST APIs", icon: "devicon-azuresqldatabase-plain colored" },
+      { name: "Auth / RBAC", icon: "devicon-oauth-plain" }
     ],
     icon: Server
   },
@@ -56,12 +56,14 @@ export const SKILL_CATEGORIES: (SkillCategory & { icon: any })[] = [
   {
     title: "DevOps & Cloud",
     skills: [
-      { name: "AWS EC2", icon: "devicon-amazonwebservices-plain-wordmark colored" },
+      { name: "AWS", icon: "devicon-amazonwebservices-plain-wordmark colored" },
       { name: "Docker", icon: "devicon-docker-plain colored" },
+      { name: "Git", icon: "devicon-git-plain colored" },
       { name: "GitHub Actions", icon: "devicon-githubactions-plain colored" },
       { name: "CI/CD", icon: "devicon-gitlab-plain colored" },
-      { name: "Linux", icon: "devicon-linux-plain" }, // Removed colored
-      { name: "Vercel", icon: "devicon-vercel-original" } // Removed colored
+      { name: "Linux", icon: "devicon-linux-plain" },
+      { name: "Vercel", icon: "devicon-vercel-original" },
+      { name: "Render", icon: "devicon-azuredevops-plain colored" }
     ],
     icon: Cloud
   },
@@ -70,9 +72,11 @@ export const SKILL_CATEGORIES: (SkillCategory & { icon: any })[] = [
     skills: [
       { name: "TensorFlow", icon: "devicon-tensorflow-original colored" },
       { name: "PyTorch", icon: "devicon-pytorch-original colored" },
-      { name: "Scikit-Learn", icon: "devicon-scikitlearn-plain colored" }, // Switched to plain
-      { name: "Pandas", icon: "devicon-pandas-plain colored" }, // Switched to plain
-      { name: "NumPy", icon: "devicon-numpy-plain colored" }, // Switched to plain
+      { name: "Scikit-Learn", icon: "devicon-scikitlearn-plain colored" },
+      { name: "XGBoost", icon: "devicon-python-plain colored" },
+      { name: "LightGBM", icon: "devicon-python-plain colored" },
+      { name: "Pandas", icon: "devicon-pandas-plain colored" },
+      { name: "NumPy", icon: "devicon-numpy-plain colored" },
       { name: "YOLOv8", icon: "devicon-opencv-plain colored" }
     ],
     icon: Brain
@@ -81,13 +85,22 @@ export const SKILL_CATEGORIES: (SkillCategory & { icon: any })[] = [
 
 export const EXPERIENCE: Experience[] = [
   {
-    company: "TANSAM",
-    role: "Machine Learning Intern",
+    company: "Cimplify.AI",
+    role: "Software Engineer Intern",
+    duration: "May 2026 – Jul 2026",
     points: [
-      "Built a production software system for automated DPD water testing, deploying it into a real public health workflow.",
-      "Designed a robust two-stage vision pipeline using YOLOv8 for Region of Interest (ROI) detection and ResNet-50 for classification (0-5 ppm).",
-      "Engineered the full-stack architecture with a Flask REST API backend and React frontend.",
-      "Reduced manual testing time by ~80% while achieving ~92% accuracy across 500+ real-world samples."
+      "Built a production planning and scheduling engine that models 7 sequential manufacturing operations using batch-transfer scheduling, eliminating dependency conflicts and validating 105 component-cluster scenarios with zero workflow violations.",
+      "Developed a 12-endpoint FastAPI backend orchestrating 6 ML models and manufacturing data pipelines to generate production schedules, procurement plans, and cost estimates from inventory, supplier, and machine-capacity data.",
+      "Implemented inventory tracking across 7 manufacturing stages to prevent redundant scheduling, and built a scenario-analysis module that evaluates alternative machine allocations to identify bottlenecks and improve resource utilization."
+    ]
+  },
+  {
+    company: "TANSAM",
+    role: "AI Engineer Intern",
+    duration: "May 2025 – Jun 2025",
+    points: [
+      "Deployed a full-stack chlorine detection system for DPD water quality testing across Tamil Nadu public health facilities, reducing manual testing time by 80%.",
+      "Built a two-stage ML pipeline — YOLOv8 for ROI localization and ResNet-50 CNN for multi-class classification (0–5 ppm) — achieving 92% accuracy on 500+ real-world samples; served via Flask REST API with React.js frontend."
     ]
   }
 ];
@@ -97,9 +110,18 @@ export const PROJECTS: Project[] = [
     title: "ExpenseOps",
     tech: ["Java", "Spring Boot", "PostgreSQL", "React", "Docker"],
     description: [
-      "Full-stack SaaS for corporate expense tracking with multi-tenancy architecture.",
-      "Implemented JWT-based isolation and Role-Based Access Control (RBAC) using Spring Security.",
-      "Developed 20+ optimized REST endpoints focusing on transaction integrity and low-memory footprint."
+      "Built a multi-tenant SaaS expense platform enforcing tenant-level data isolation and JWT-based role access across 4 permission levels, featuring a 5-stage approval workflow and immutable audit trails for compliance and traceability.",
+      "Engineered 20+ REST APIs using Spring Boot and PostgreSQL with optimistic locking for concurrent-write safety; load-tested with k6 and maintained sub-second response times under concurrent workloads."
+    ],
+    github: SOCIAL_LINKS.github,
+    featured: true
+  },
+  {
+    title: "AI SQL Optimiser",
+    tech: ["FastAPI", "React", "PostgreSQL", "LangChain", "Pinecone", "Docker"],
+    description: [
+      "Built an AI-powered SQL optimization platform that analyzes queries, scores complexity across 4 tiers, and detects 4 SQL performance anti-patterns before generating explanations, index suggestions, and optimized rewrites through a 4-stage LangChain pipeline powered by Gemini.",
+      "Streamed optimization results in real time using Server-Sent Events (SSE) and leveraged Pinecone vector search to retrieve similar historical query optimizations as context, improving the relevance and accuracy of LLM-generated recommendations."
     ],
     github: SOCIAL_LINKS.github,
     featured: true
@@ -108,9 +130,8 @@ export const PROJECTS: Project[] = [
     title: "LinkShelf",
     tech: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
     description: [
-      "High-performance bookmark management platform with full-text search indexing.",
-      "Engineered an import engine for browser exports and implemented rate limiting for API protection.",
-      "Focus on clean API design, efficient data modeling, and metadata enrichment."
+      "Built a bookmark management platform with 16 REST endpoints, a normalized 5-table PostgreSQL schema, GIN-indexed tsvector full-text search, and a multi-browser import engine supporting Chrome, Firefox, Safari, and Edge exports with failure recovery.",
+      "Implemented Open Graph metadata scraping with automatic timeout handling, database-level URL deduplication, and IP-based rate limiting (500 req / 15 min) to improve platform reliability and search performance."
     ],
     github: SOCIAL_LINKS.github,
     featured: true
@@ -193,6 +214,24 @@ export const PUBLICATIONS: Publication[] = [
   {
     conference: "IEEE ICERECT-2025",
     title: "ENDCL: An Attention-Enhanced CNN-BiLSTM Model for Automated Cardiovascular Disease Detection",
-    status: "Awaiting publication"
+    status: "Published in IEEE Xplore"
+  }
+];
+
+export const ACHIEVEMENTS: Achievement[] = [
+  {
+    title: "LeetCode — Solved 250+ Problems",
+    source: "LeetCode",
+    link: "https://leetcode.com/u/Rahul__-24/"
+  },
+  {
+    title: "IEEE ICERECT-2025 Conference Paper Publication",
+    source: "IEEE",
+    description: "Published in IEEE Xplore: ENDCL: Attention-Enhanced CNN-BiLSTM Model for Automated Cardiovascular Disease Detection."
+  },
+  {
+    title: "HackHub'25 National-Level Hackathon Finalist (Top 150/2000+)",
+    source: "HackHub",
+    description: "Selected among Top 150 Teams from 2000+ Applicants. Built DeepShield, a Vision Transformer-based Deepfake Detection System."
   }
 ];

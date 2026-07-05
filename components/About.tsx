@@ -21,13 +21,13 @@ const About: React.FC = () => {
 
             <div className="space-y-6 text-neutral-300 text-base sm:text-lg md:text-xl leading-relaxed font-medium">
               <p>
-                I am a B.Tech Computer Science and Engineering student specializing in AI and Machine Learning at <strong className="text-violet-400 font-bold">VIT Chennai</strong>, with a strong focus on software engineering and backend systems. I enjoy building reliable, production-grade applications using technologies like <strong className="text-violet-400 font-bold">Java, Spring Boot, Node.js, React, and PostgreSQL</strong>. My interests lie in designing clean APIs, scalable system architectures, and full-stack products that solve real problems rather than just building demos.
+                I am a B.Tech Computer Science and Engineering student specializing in AI and Machine Learning at <strong className="text-violet-400 font-bold">VIT Chennai</strong>, with a strong focus on software engineering and backend systems. I enjoy building reliable, production-grade applications using technologies like <strong className="text-violet-400 font-bold">Java, Spring Boot, FastAPI, Node.js, React, and PostgreSQL</strong>. My interests lie in designing clean APIs, scalable system architectures, and full-stack products that solve real problems.
               </p>
               <p>
-                During my internship at <strong className="text-violet-400 font-bold">TANSAM</strong>, I worked on a real-world deployed system for automated water quality testing, where I helped build a two-stage machine learning pipeline integrated into a production-ready Flask API and React frontend. The system was used in a public sector workflow and significantly reduced manual testing time while maintaining high accuracy. This experience taught me how to think beyond models and focus on system integration, reliability, and real-world constraints.
+                At <strong className="text-violet-400 font-bold">Cimplify.AI</strong>, I built a production planning engine with a 12-endpoint FastAPI backend orchestrating 6 ML models for manufacturing scheduling. At <strong className="text-violet-400 font-bold">TANSAM</strong>, I deployed a full-stack chlorine detection system using YOLOv8 and ResNet-50 for public health water quality testing across Tamil Nadu, reducing manual testing time by 80%. These experiences taught me to focus on system integration, reliability, and real-world constraints.
               </p>
               <p>
-                Through projects like <strong className="text-violet-400 font-bold">ExpenseOps, LinkShelf, and MoodCast</strong>, I have built full-stack systems involving authentication, role-based access control, data modeling, performance optimization, and API design. I am comfortable working with <strong className="text-violet-400 font-bold">Java, Python, C++, and TypeScript</strong>, and I enjoy learning by building and refining real systems. I am currently looking for software engineering opportunities where I can contribute to building robust products and continue growing as an engineer.
+                Through projects like <strong className="text-violet-400 font-bold">ExpenseOps, AI SQL Optimiser, and LinkShelf</strong>, I have built full-stack systems involving multi-tenancy, role-based access control, LLM-powered pipelines, data modeling, and API design. I am comfortable working with <strong className="text-violet-400 font-bold">Java, Python, C++, and TypeScript</strong>, and I enjoy learning by building and refining real systems. I am currently looking for software engineering opportunities where I can contribute to building robust products and continue growing as an engineer.
               </p>
             </div>
           </motion.div>
@@ -51,7 +51,7 @@ const About: React.FC = () => {
                   <p className="text-sm sm:text-base text-neutral-500 font-medium">
                     Chennai, India • Aug 2023 – May 2027 (Expected)
                   </p>
-                  <p className="text-sm sm:text-base text-neutral-400 mt-2 font-medium">CGPA: 8.65</p>
+                  <p className="text-sm sm:text-base text-neutral-400 mt-2 font-medium">CGPA: 8.77</p>
                 </div>
               </div>
             </div>

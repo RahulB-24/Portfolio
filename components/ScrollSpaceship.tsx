@@ -8,8 +8,8 @@ const ScrollSpaceship: React.FC = () => {
   // Smooth spring animation for position
   // Map scroll 0-1 to viewport height (2vh to 92vh)
   const y = useSpring(useTransform(scrollYProgress, [0, 1], ['2vh', '92vh']), {
-    stiffness: 80,
-    damping: 25,
+    stiffness: 300,
+    damping: 40,
     restDelta: 0.001
   });
 
@@ -69,12 +69,11 @@ const ScrollSpaceship: React.FC = () => {
       {/* Terminal Cursor Indicator */}
       <motion.div
         style={{ top: y }}
-        className="absolute left-1/2 -translate-x-1/2 -ml-[1px] w-auto h-auto flex items-center justify-center pointer-events-auto cursor-grab active:cursor-grabbing"
+        className="absolute right-0 w-auto h-auto flex items-center justify-center pointer-events-auto cursor-grab active:cursor-grabbing"
         onPointerDown={(e) => {
           e.preventDefault();
           setIsDragging(true);
         }}
-        whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
         <div className="flex items-center gap-2">

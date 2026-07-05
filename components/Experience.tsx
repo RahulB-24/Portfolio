@@ -5,7 +5,7 @@ import { EXPERIENCE } from '../constants';
 const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-32">
-      <div className="max-w-4xl mx-auto px-8 md:px-6">
+      <div className="max-w-6xl mx-auto px-8 md:px-6">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-white flex items-center gap-4 mb-16 font-display"
           initial={{ opacity: 0, x: -20 }}
